@@ -5,35 +5,6 @@ const api = Router();
 const apiResponse = new ApiResponse();
 const WORDS_PER_DAY_LIMIT = 80000;
 const wordsProcessedMap = new Map<string, number>();
-/**
- * @swagger
- * /justify:
- *   post:
- *     summary: Justifier un texte
- *     description: Cette route permet de justifier un texte fourni dans le corps de la requête.
- *     consumes:
- *       - "text/plain"
- *     produces:
- *       - "text/plain"
- *     parameters:
- *       - in: body
- *         name: body
- *         description: Texte à justifier
- *         required: true
- *         schema:
- *           type: string
- *     responses:
- *       200:
- *         description: Texte justifié
- *         schema:
- *           type: string
- *       400:
- *         description: Mauvaise requête
- *       401:
- *         description: Non autorisé
- *       429:
- *         description: Trop de requêtes
- */
 
 api.post(
   "/",

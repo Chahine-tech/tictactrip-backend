@@ -16,38 +16,6 @@ function generateToken(): string {
   return token;
 }
 
-/**
- * @swagger
- * /token:
- *   post:
- *     summary: Créer un jeton
- *     description: Cette route permet de créer un jeton pour un utilisateur.
- *     produces:
- *       - "application/json"
- *     parameters:
- *       - in: body
- *         name: body
- *         description: Adresse e-mail de l'utilisateur
- *         required: true
- *         schema:
- *           type: object
- *           properties:
- *             email:
- *               type: string
- *     responses:
- *       200:
- *         description: Jeton créé avec succès
- *         schema:
- *           type: object
- *           properties:
- *             token:
- *               type: string
- *       400:
- *         description: Mauvaise requête
- *       429:
- *         description: Trop de requêtes
- */
-
 api.post("/", (req, res) => {
   const { email } = req.body;
   if (!email) {

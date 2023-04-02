@@ -7,7 +7,7 @@
     "serve": "nodemon app.ts",
     "lint": "eslint --ext .js,.ts .",
     "start": "tsup app.ts --clean && node dist/app.js",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "Chahine-tech",
