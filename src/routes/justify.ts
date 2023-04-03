@@ -1,5 +1,5 @@
 import { Router, Request, Response, NextFunction } from "express";
-import { ApiResponse } from "../utils/response";
+import { ApiResponse } from "../../utils/response";
 import extractTokenMiddleware from "../middlewares/authorization";
 const api = Router();
 const apiResponse = new ApiResponse();
